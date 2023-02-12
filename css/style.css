@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #161A23;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .calculator{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.display{
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+#expContainer{
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+    text-align: end;
+}
+#expContainer > :first-child{
+    margin-left: auto !important;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+.expression{
+    font-size: 3.5rem;
+    white-space: nowrap;
+    user-select: none;
+    display: inline-block;
+    color: white;
+}
+.operation{
+    color: #668BDC !important;
+}
+#answer{
+    user-select: none;
+    text-align: end;
+    font-size: 1.5rem;
+    padding: 10px 0px;
+    color: #999999;
+    font-weight: 300;
+    color: transparent;
+}
+
+.iconContainer{
+    margin-top: 0px;
+    cursor: pointer;
+    width: 24px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.icon{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(182deg) brightness(102%) contrast(101%);
+}
+
+hr{
+    height: 1px;
+    margin-top: 20px;
+    background-color: #262626;
+    border: none;
+}
+.btns{
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.btnContainer{
+    height: 100%;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+#ac{
+    font-size: 1.3rem;
+}
+#backspace{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#backspace ion-icon{
+    font-size: 1.5rem;
+}
+
+input[type=button], #backspace, .brackets{
+    background-color: #141414;
+    color: white;
+    font-size: 1.7rem;
+    margin: 0.8vh;
+    border-radius: 5vh;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.operator{
+    background-color: #131329 !important;
+    color: #668BDC !important;
+    
+}
+.equals{
+    background-color: #668BDC !important;
+}
+
+.brackets{
+    width: 50%;
+}

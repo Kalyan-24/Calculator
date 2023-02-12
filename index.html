@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
+                <div id="expContainer"></div>
+                <div>
+                    <h2 id="answer">0</h2>
+                </div>
+            </div>
+
+            <div>
+                <div class="iconContainer">
+                    <img src="./assets/history-line-icon.svg" class="icon">
+                </div>
+                <div class="iconContainer">
+                    <img style=" width: 24px; height: 24px;" src="assets/ic_screen_rotation.svg" class="icon">
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="btns">
+                <div class="btnContainer">
+                    <input type="button" value="AC" onclick="allClear('ac')" class="operator" id="ac">
+                    <span id="backspace" onclick="backspace()" class="operator">
+                        <ion-icon name="backspace"></ion-icon>
+                    </span>
+                    <input type="button" value="%" onclick="addOpe('%')" class="operator">
+                    <input type="button" value="÷" onclick="addOpe('÷')" class="operator">
+                    <input type="button" value="7" onclick="addNum('7')">
+                    <input type="button" value="8" onclick="addNum('8')">
+                    <input type="button" value="9" onclick="addNum('9')">
+                    <input type="button" value="×" onclick="addOpe('×')" class="operator">
+                    <input type="button" value="4" onclick="addNum('4')">
+                    <input type="button" value="5" onclick="addNum('5')">
+                    <input type="button" value="6" onclick="addNum('6')">
+                    <input type="button" value="−" onclick="addOpe('−')" class="operator">
+                    <input type="button" value="1" onclick="addNum('1')">
+                    <input type="button" value="2" onclick="addNum('2')">
+                    <input type="button" value="3" onclick="addNum('3')">
+                    <input type="button" value="+" onclick="addOpe('+')" class="operator">
+                    <div style="display: flex;">
+                        <input type="button" value="(" onclick="addBracket('open')" class="operator brackets">
+                        <input type="button" value=")" onclick="addBracket('closed')" class="operator brackets">
+                    </div>
+                    <input type="button" value="0" onclick="addNum('0')">
+                    <input type="button" value="." onclick="addDecimal()">
+                    <input type="button" value="=" onclick="equals('equals')" class="equals">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
